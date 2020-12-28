@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href='https://fonts.googleapis.com/css?family=Lexend Deca' rel='stylesheet'>
+  <style>
+  body {
+    background-color: #212121;
+    color: #f5f5f5;
+    padding: 350px 470px;
+    text-align: center;
+    font-family: lexend deca
+  }
+
+  footer {
+  position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: #151515;
+   color: #f5f5f5;
+   padding: 40px 0px;
+   text-align: center;
+  }
+
+  button {
+    background-color: #fafafa;
+    border: none;
+    color: #212121;
+    padding: 7px 41px;
+    text-align: center;
+    font-size: 20px;
+    font-family: lexend deca;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+
+  a {
+    background-color:#616161;
+    color:#f5f5f5;
+    padding: 10px 70px;
+    text-align: center;
+    font-family: lexend deca
+  }
+  </style>
+<title>tigerros</title>
+</head>
+<body>
+
+  <a href="https://tigerros.github.io" style="color: #f5f5f5; font-size: 40px; text-decoration: underline">tigerros</a><br>
+  <p style="font-size: 25px">Power calculator</p>
+
+  <p style="font-size: 17px">Base number</p>
+  <input type="number" id="base"><br>
+
+  <p style="font-size: 17px">Exponent</p>
+  <input type="number" id="exponent"><br><br>
+
+  <button onclick="resultFunc()" style="font-size: 20px">Calculate</button><br>
+  <p style="font-size: 17px" id="result"></p>
+
+  <footer>
+    <a href="https://tigerros.github.io" style="background-color: #15151515; padding: 0px 0px; text-decoration: underline">Jump to home page</a><br>
+  </footer>
+
+  <script>
+  function powerFunc() { // Returns the set number to the power of the exponent
+    var base = document.getElementById('base').value
+    var exponent = document.getElementById('exponent').value
+
+    return Math.pow(base, exponent)
+  }
+
+  function resultFunc() { // Uses powerFunc() to get the result and shows it
+    var result = document.getElementById('result')
+
+    result.innerHTML = powerFunc()
+    console.log("Showed result")
+  }
+  </script>
+
+</body>
+</html>
