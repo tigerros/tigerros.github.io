@@ -3,15 +3,65 @@
 <head>
   <link href='https://fonts.googleapis.com/css?family=Lexend Deca' rel='stylesheet'>
   <style>
-  body
-  {
-    text-align:center; background-color:#212121; color:#F5F5F5; font-family: lexend deca
+  body {
+    background-color:#212121;
+    color:#f5f5f5;
+    padding: 350px 470px;
+    text-align:center;
+    font-family: lexend deca
+  }
+
+  button {
+    background-color: #fafafa;
+    border: none;
+    color: #212121;
+    padding: 7px 41px;
+    text-align: center;
+    font-size: 20px;
+    font-family: lexend deca;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+
+  a {
+    background-color:#212121;
+    color:#f5f5f5;
+    padding: 10px 70px;
+    text-align: center;
+    font-family: lexend deca
   }
   </style>
 <title>tigerros</title>
 </head>
 <body>
-  <h1  style="font-size: 40px">tigerros</h1>
-  <p style="font-size: 25px">Nothing here yet</p>
+
+  <a href="https://tigerros.github.io" style="background-color: #616161; color: #f5f5f5; font-size: 40px; text-decoration: underline">tigerros</a><br>
+  <p style="font-size: 25px">Power calculator</p>
+
+  <p style="font-size: 17px">Base number</p>
+  <input type="number" id="base"><br>
+
+  <p style="font-size: 17px">Exponent</p>
+  <input type="number" id="exponent"><br><br>
+
+  <button onclick="resultFunc()" style="font-size: 20px">Calculate</button><br>
+  <p style="font-size: 17px" id="result"></p>
+
+  <script>
+  function powerFunc() { // Returns the set number to the power of the exponent
+    var base = document.getElementById('base').value
+    var exponent = document.getElementById('exponent').value
+
+    return Math.pow(base, exponent)
+  }
+
+  function resultFunc() { // Uses powerFunc() to get the result and shows it
+    var result = document.getElementById('result')
+
+    result.innerHTML = powerFunc()
+    console.log("Showed result")
+  }
+  </script>
+
 </body>
 </html>
