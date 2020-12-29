@@ -1,8 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link href='https://fonts.googleapis.com/css?family=Lexend Deca' rel='stylesheet'>
-  <style>
+  <link href='https://fonts.googleapis.com/css?family=Lexend Deca' rel='stylesheet'> <!-- Grabs the font from google's website -->
+  <style> /* The styling (changed in some cases) */
+
+  input::-webkit-outer-spin-button, /* Remove the number input arrows for Chrome & others */
+  input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+  }
+
+  input[type=number] { /* Remove the number input arrows for Firefox */
+  -moz-appearance: textfield;
+  }
+
   body {
     background-color: #212121;
     color: #f5f5f5;
@@ -20,6 +31,7 @@
    color: #f5f5f5;
    padding: 40px 0px;
    text-align: center;
+   box-shadow: 5px 5px 20px #181818;
   }
 
   button {
@@ -42,39 +54,41 @@
     font-family: lexend deca
   }
   </style>
+
 <title>tigerros</title>
 </head>
+
 <body>
 
+  <!-- All the visible content -->
   <a href="https://tigerros.github.io" style="color: #f5f5f5; font-size: 40px; text-decoration: underline">tigerros</a><br>
-  <p style="font-size: 25px">Power calculator</p>
+  <p style="font-size: 25px"></p>
 
-  <p style="font-size: 17px">Base number</p>
-  <input type="number" id="base"><br>
+  <input type="number" id="main"><br>
 
-  <p style="font-size: 17px">Exponent</p>
-  <input type="number" id="exponent"><br><br>
-
-  <button onclick="resultFunc()" style="font-size: 20px">Calculate</button><br>
+  <button onclick="substractFunc()" style="font-size: 20px">Calculate</button><br>
   <p style="font-size: 17px" id="result"></p>
 
   <footer>
-    <a href="https://tigerros.github.io" style="background-color: #15151515; padding: 0px 0px; text-decoration: underline">Jump to home page</a><br>
+    <a href="https://tigerros.github.io" style="background-color: #15151515; padding: 0px 0px; text-decoration: underline">Jump to home page</a><br><br>
+    <a href="power_calculator/index.html" style="background-color: #15151515; padding: 0px 0px; text-decoration: underline">Power calculator</a>&emsp;
+    <a href="calculator/index.html" style="background-color: #15151515; padding: 0px 0px; text-decoration: underline">Calculator</a>
   </footer>
+  <!-- All the visible content -->
 
   <script>
-  function powerFunc() { // Returns the set number to the power of the exponent
-    var base = document.getElementById('base').value
-    var exponent = document.getElementById('exponent').value
+  function mainFunc() { // Returns the set number to the power of the exponent
+    var main = document.getElementById('main').value
 
-    return Math.pow(base, exponent)
+
   }
 
-  function resultFunc() { // Uses powerFunc() to get the result and shows it
+  function substractFunc() { // Uses powerFunc() to fetch the result and shows it
     var result = document.getElementById('result')
 
-    result.innerHTML = powerFunc()
+    result.innerHTML = mainFunc()
     console.log("Showed result")
+    }
   }
   </script>
 
