@@ -1,1 +1,1 @@
-Note: Site does not work on debian/ubuntu linux Firefox
+Note: Site does not work on Firefox running on debian/ubuntu
