@@ -1,19 +1,23 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <link href='https://fonts.googleapis.com/css?family=Lexend Deca' rel='stylesheet'> <!-- Grabs the font from google's website -->
   <style> /* The styling (changed in some cases) */
 
-  input[type=number]::-webkit-inner-spin-button,
-  input[type=number]::-webkit-outer-spin-button {
+  input::-webkit-inner-spin-button,
+  input::-webkit-outer-spin-button {
       -webkit-appearance: none;
       margin: 0;
+      border: none;
+      padding: 5px 5px
   }
 
-  input[type=number] {
+  input {
     -moz-appearance: textfield;
     appearance: textfield;
     margin: 0;
+    border: none;
+    padding: 5px 5px;
   }
 
   body {
@@ -29,17 +33,7 @@
    left: 0;
    bottom: 0;
    width: 100%;
-   background-color: #151input[type=number]::-webkit-inner-spin-button,
-  input[type=number]::-webkit-outer-spin-button {
-      -webkit-appearance: none;
-      margin: 0;
-  }
-
-  input[type=number] {
-    -moz-appearance: textfield;
-    appearance: textfield;
-    margin: 0;
-  }515;
+   background-color: #151515;
    color: #f5f5f5;
    padding: 40px 0px;
    text-align: center;
@@ -65,7 +59,6 @@
     text-align: center;
     font-family: lexend deca
   }
-
   </style>
 
 <title>tigerros</title>
@@ -87,26 +80,25 @@
   <p style="font-size: 17px" id="result"></p>
 
   <footer>
-    <a href="https://tigerros.github.io" style="background-color: #15151515; padding: 0px 0px; text-decoration: underline">Jump to home page</a><br><br>
+    <a href="main_page/index.html" style="background-color: #15151515; padding: 0px 0px; text-decoration: underline">Jump to home page</a><br><br>
     <a href="power_calculator/index.html" style="background-color: #15151515; padding: 0px 0px; text-decoration: underline">Power calculator</a>&emsp;
   </footer>
   <!-- All visible content -->
 
   <script>
-  function powerFunc() {
+  function powerFunc() { // Multiplies the "base" number to the power of the "exponent"
     var base = document.getElementById('base').value
     var exponent = document.getElementById('exponent').value
 
     return Math.pow(base, exponent)
   }
 
-  function resultFunc() {
+  function resultFunc() { // Uses powerFunc() to show the result
     var result = document.getElementById('result')
 
     result.innerHTML = powerFunc()
     console.log("Showed result")
   }
-
   </script>
 
 </body>
