@@ -33,7 +33,7 @@
   input {
     -moz-appearance: textfield;
     appearance: textfield;
-    color: #212121;
+    color: #424242;
     margin: 0;
     border: none;
     padding: 4px 4px;
@@ -44,7 +44,7 @@
   button {
     background-color: #ffb74d;
     border: none;
-    color: #212121;
+    color: #424242;
     padding: 7px 41px;
     text-align: center;
     font-size: 20px;

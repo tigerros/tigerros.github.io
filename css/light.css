@@ -16,7 +16,7 @@
    bottom: 0;
    width: 100%;
    background-color: #e0e0e0;
-   color: #212121;
+   color: #424242;
    padding: 40px 0px;
    text-align: center;
    transition: 0.4s ease;
@@ -33,7 +33,7 @@
   input {
     -moz-appearance: textfield;
     appearance: textfield;
-    color: #212121;
+    color: #424242;
     margin: 0;
     border: none;
     padding: 4px 4px;
