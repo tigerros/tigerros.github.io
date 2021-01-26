@@ -1,24 +1,47 @@
 <!DOCTYPE html> <!-- This is the first thing you see upon opening the site and all redirects lead to here -->
 <html lang="en">
 <head>
-  <link href='https://fonts.googleapis.com/css?family=Lexend Deca' rel='stylesheet'> <!-- Grabs the font from google's website -->
-  <link href="css/styles.css" rel="stylesheet"> <!-- Get the external style sheet -->
+  <link href='https://fonts.googleapis.com/css?family=Lexend Deca' rel="stylesheet"> <!-- Lexend Deca -->
+
+  <!-- Favicons -->
+  <link href="favicons/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
+  <link href="favicons/favicon-32x32.png" rel="icon" type="image/png" sizes="32x32">
+  <link href="favicons/favicon-16x16.png" rel="icon" type="image/png" sizes="16x16">
+
+  <link id="theme" href="css/light.css" rel="stylesheet">
 <title>tigerros</title>
 </head>
 <body>
 
   <!-- All visible content -->
-  <a href="https://tigerros.github.io" style="color: #f5f5f5; font-size: 40px; text-decoration: underline">tigerros</a><br>
+  <a href="https://tigerros.github.io" style="font-size: 40px; text-decoration: underline">tigerros</a><br>
   <p style="font-size: 25px">My stuff</p>
 
 
   <button onclick="window.location.href='power_calculator/index.html'" style="font-size: 20px">Power calculator</button><br>
 
+  <button class="dark" onclick="darkTheme()" style="font-size: 15px; padding: 10px">Dark Theme</button>
+  <button class="light" onclick="lightTheme()" style="font-size: 15px; padding: 10px">Light Theme</button>
+
+
   <footer>
-    <a href="../index.html" style="background-color: #15151515; padding: 0px 0px; text-decoration: underline">Jump to home page</a><br><br>
-    <a href="power_calculator/pow.html" style="background-color: #15151515; padding: 0px 0px; text-decoration: underline">Power calculator</a>&emsp;
+    <a href="../index.html" style="padding: 0px 0px; text-decoration: underline">Jump to home page</a><br><br>
+    <a href="power_calculator/pow.html" style="padding: 0px 0px; text-decoration: underline">Power calculator</a> <!-- &emsp; -->
   </footer>
-  <!-- All visible content -->
+  <!-- All visible content d-->
+
+	<script>
+    var theme = document.getElementById('theme') // TODO: Toggle theme
+
+    function darkTheme(){
+      theme.href = 'css/dark.css'
+    }
+
+    function lightTheme(){
+      theme.href = 'css/light.css'
+    }
+
+	</script>
 
 </body>
 </html>

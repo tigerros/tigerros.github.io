@@ -1,0 +1,80 @@
+/* Dark Mode */
+
+  body {
+    background-color: #212121;
+    color: #f5f5f5;
+    padding: 150px 470px;
+    overflow: hidden;
+    text-align: center;
+    font-family: lexend deca;
+    transition: .4s ease;
+  }
+
+  footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: #151515;
+   color: #f5f5f5;
+   padding: 40px 0px;
+   text-align: center;
+   transition: 0.4s ease;
+  }
+
+  input::-webkit-inner-spin-button,
+  input::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+      border: none;
+      padding: 5px 5px;
+  }
+
+  input {
+    -moz-appearance: textfield;
+    appearance: textfield;
+    color: #212121;
+    margin: 0;
+    border: none;
+    padding: 4px 4px;
+    font-family: lexend deca;
+    transition: 0.4s ease;
+  }
+
+  button {
+    background-color: #ffb74d;
+    border: none;
+    color: #212121;
+    padding: 7px 41px;
+    text-align: center;
+    font-size: 20px;
+    font-family: lexend deca;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition: 0.4s ease;
+  }
+
+  a {
+    background-color: #424242;
+    color: #f5f5f5;
+    padding: 10px 70px;
+    text-align: center;
+    font-family: lexend deca;
+    transition: 0.4s ease;
+  }
+
+  a:hover {
+    color: #ffb74d;
+  }
+
+  button.dark {
+    position: fixed;
+    left: 50px;
+    top: 1100px;
+  }
+
+  button.light {
+    position: fixed;
+    left: 180px;
+    top: 1100px;
+  }
