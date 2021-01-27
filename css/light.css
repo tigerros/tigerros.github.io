@@ -1,19 +1,35 @@
 /* Light Mode */
 
   body {
+    position: absolute;
+    top: 25%;
+    left: 0%;
+    width: 100%;
     background-color: #eeeeee;
     color: #424242;
-    padding: 150px 470px;
-    overflow: hidden;
+    overflow-x: hidden;
     text-align: center;
     font-family: lexend deca;
+
+  }
+
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0px;
+    height: 88%;
+    width: auto;
+    background-color: #7986cb;
+    color: #eeeeee;
+    padding: 20px;
+    text-align: left;
     transition: 0.4s ease;
   }
 
   footer {
    position: fixed;
-   left: 0;
    bottom: 0;
+   left: 0;
    width: 100%;
    background-color: #e0e0e0;
    color: #424242;
@@ -69,12 +85,12 @@
 
   button.dark {
     position: fixed;
-    left: 50px;
+    left: 25px;
     top: 1100px;
   }
 
   button.light {
     position: fixed;
-    left: 180px;
-    top: 1100px;
+    left: 25px;
+    top: 1050px;
   }

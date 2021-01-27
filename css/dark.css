@@ -7,7 +7,7 @@
     overflow: hidden;
     text-align: center;
     font-family: lexend deca;
-    transition: .4s ease;
+    transition: 0.4s ease;
   }
 
   footer {
@@ -55,7 +55,7 @@
   }
 
   a {
-    background-color: #424242;
+    background-color: #151515;
     color: #f5f5f5;
     padding: 10px 70px;
     text-align: center;
