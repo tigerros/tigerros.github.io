@@ -1,6 +1,5 @@
 <!DOCTYPE html> <!-- Power Calculator -->
 <html lang="en">
-
 <head>
   <link href='https://fonts.googleapis.com/css?family=Lexend Deca' rel='stylesheet'> <!-- Lexend Deca -->
 
@@ -20,9 +19,10 @@
 <meta name="keywords" content="personal projects">
 <meta name="keywords" content="power calculator">
 <!-- Meta Data -->
-
 </head>
 <body>
+  <script src="../js/themes.js"></script> <!-- Theme script -->
+  <script src="../js/pow.js"></script>
 
   <!-- All visible content -->
   <div class="sidebar">
@@ -46,42 +46,15 @@
   </div>
 
   <div class="themeButtons">
-    <button class="dark" onclick="darkTheme()" style="font-size: 15px; padding: 10px">Dark Theme</button>
-    <button class="light" onclick="lightTheme()" style="font-size: 15px; padding: 10px">Light Theme</button>
+    <button class="dark" onclick="darkTheme('../css/dark.css')" style="font-size: 15px; padding: 11.5px">Dark Theme</button>
+    <button class="light" onclick="lightTheme('../css/light.css')" style="font-size: 15px; padding: 10px">Light Theme</button>
   </div>
-  
+
   <footer>
     <a href='../index.html' style="padding: 0px 0px; text-decoration: underline">Jump to home page</a><br><br>
-    <a href='power_calculator/index.html' style=" padding: 0px 0px; text-decoration: underline">Power calculator</a><!-- &emsp; -->
+    <a href='power_calculator/index.html' style=" padding: 0px 0px; text-decoration: underline">Power calculator</a> <!-- &emsp; -->
   </footer>
   <!-- All visible content -->
-
-  <script>
-  function powerFunc() { // Multiplies the "base" number to the power of the "exponent"
-    var base = document.getElementById('base').value
-    var exponent = document.getElementById('exponent').value
-
-    return Math.pow(base, exponent)
-  }
-
-  function resultFunc() { // Gets result
-    var result = document.getElementById('result')
-
-    result.innerHTML = powerFunc()
-    console.log("Showed result")
-  }
-
-  var theme = document.getElementById('theme') // TODO: Toggle theme
-
-  function darkTheme(){
-    theme.href = '../css/dark.css'
-  }
-
-  function lightTheme(){
-    theme.href = '../css/light.css'
-  }
-
-  </script>
 
 </body>
 </html>
