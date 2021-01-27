@@ -10,7 +10,7 @@
     overflow-x: hidden;
     text-align: center;
     font-family: lexend deca;
-
+    transition: 0.4s ease;
   }
 
   .sidebar {
