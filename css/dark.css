@@ -83,14 +83,8 @@
     color: #ffb74d;
   }
 
-  button.dark {
+  button.themeButton {
     position: fixed;
     left: 25px;
     top: 1100px;
-  }
-
-  button.light {
-    position: fixed;
-    left: 25px;
-    top: 1050px;
   }
