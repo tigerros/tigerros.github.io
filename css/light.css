@@ -83,7 +83,7 @@
     color: #81c784;
   }
 
-  themeButton {
+  button.themeButton {
     position: fixed;
     left: 25px;
     top: 1100px;
