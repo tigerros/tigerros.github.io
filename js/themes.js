@@ -1,15 +1,11 @@
-var theme = document.getElementById('theme'); // TODO: Toggle theme
+var theme = document.getElementById('theme');
 
-function darkTheme() {
-  if (theme.href === 'css/light.css') {
-    theme.href = 'css/dark.css';
+function toggleTheme() {
+  if (theme.href == "https://tigerros.github.io/css/light.css") {
+    theme.href = "https://tigerros.github.io/css/dark.css";
     console.log(theme.href);
   } else {
-    theme.href = 'css/light.css';
+    theme.href = "https://tigerros.github.io/css/light.css";
     console.log(theme.href);
   }
 }
-
-//function lightTheme(path){
-  //theme.href = path;
-//}
