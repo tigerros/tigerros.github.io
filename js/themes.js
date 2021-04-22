@@ -1,6 +1,6 @@
 var theme = document.getElementById('theme'); // TODO: Toggle theme
 
-function darkTheme(){
+function darkTheme() {
   if (theme.href === '../css/light.css') {
     theme.href = '../css/dark.css';
     console.log(theme.href);
