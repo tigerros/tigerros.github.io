@@ -6,11 +6,11 @@ edition = "2021"
 [dependencies]
 yew = { version = "0.20.0", features = ["csr"] }
 yew-router = "0.17.0"
-gloo-net = "0.4.0"
+gloo-net = { features = ["http"], default-features = false, version = "0.4.0" }
 wasm-bindgen-futures = "0.4.37"
-futures = "0.3.28"
-gloo-console = "0.3.0"
 
 [profile.release]
 lto = true
 opt-level = 'z'
+codegen-units = 1
+strip = "symbols"

@@ -1,5 +1,4 @@
 use crate::router::Route;
-use gloo_console::info;
 use yew::prelude::*;
 use yew_router::Routable;
 

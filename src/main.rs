@@ -1,7 +1,3 @@
-use crate::router::Route;
-use gloo_console::info;
-use yew_router::Routable;
-
 mod components;
 mod router;
 mod routes;

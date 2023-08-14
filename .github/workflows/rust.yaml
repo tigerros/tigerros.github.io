@@ -1,32 +1,32 @@
-#name: Deploy to GitHub Pages
-#
-#on:
-#  push:
-#    branches: [ master ]
-#  pull_request:
-#    branches: [ master ]
-#
-#jobs:
-#  deploy-to-github-pages:
-#    runs-on: ubuntu-latest
-#    steps:
-#      - uses: actions/checkout@v3
-#      - uses: jetli/trunk-action@v0.4.0
-#        with:
-#          version: 'latest'
-#
-#      - name: Add WASM target
-#        run: rustup target add wasm32-unknown-unknown
-#
-#      - name: Trunk build
-#        run: trunk build --release
-#
-#      - name: Run tests
-#        run: cargo test
-#
-#      - name: Commit to GitHub Pages
-#        uses: JamesIves/github-pages-deploy-action@v4
-#        with:
-#          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-#          BRANCH: github-pages
-#          FOLDER: dist
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  deploy-to-github-pages:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: jetli/trunk-action@v0.4.0
+        with:
+          version: 'latest'
+
+      - name: Add WASM target
+        run: rustup target add wasm32-unknown-unknown
+
+      - name: Trunk build
+        run: trunk build --release
+
+      - name: Run tests
+        run: cargo test
+
+      - name: Commit to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH: github-pages
+          FOLDER: dist

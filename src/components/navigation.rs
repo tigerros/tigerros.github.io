@@ -1,6 +1,4 @@
 use crate::router::BetterRoute;
-use gloo_console::info;
-use std::collections::HashMap;
 use yew::prelude::*;
 use yew_router::prelude::*;
 

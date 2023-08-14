@@ -1,0 +1,27 @@
+{
+  "version": 0,
+  "root_name": "tigerros_web",
+  "workspace_crates": {
+    "tigerros_web": {
+      "full_path": "C:\\Users\\aurel\\source\\repos\\tigerros_web\\Cargo.toml",
+      "dependencies": {
+        "gloo-net": {
+          "original_features": [
+            "eventsource",
+            "websocket",
+            "http",
+            "json"
+          ],
+          "successfully_removed_features": [
+            "eventsource",
+            "websocket",
+            "json"
+          ],
+          "unsuccessfully_removed_features": [
+            "http"
+          ]
+        }
+      }
+    }
+  }
+}
