@@ -1,0 +1,45 @@
+## An IntelliJ IDEA file template for Yew Struct Components.
+## Usage:
+## 1. Go to File | Settings | Editor | File and Code Templates.
+## 2. Click + (Create Template).
+## 3. Change "Name" to: Yew Struct Component
+## 4. Change "Extension" to: rs
+## 5. Change "File name" to: $NAME
+## 6. Enable "Reformat according to style".
+## 7. Paste in the code below.
+#set($word = $word)
+#set($camelCaseName = $camelCaseName)
+#define($camelCaseName)#set($words = $NAME.split("_"))#foreach($word in $words)#if($word.length() > 0)$word.substring(0,1).toUpperCase()$word.substring(1).toLowerCase()#end#end#end
+use yew::prelude::*;
+
+#if($Leave_empty_for_no_msg != '')
+pub enum Msg {
+
+}
+
+#end
+#if($Leave_empty_for_no_props != '')
+#[derive(PartialEq, Properties)]
+pub struct Props {
+
+}
+
+#end
+struct $camelCaseName;
+
+impl Component for $camelCaseName {
+    #if($Leave_empty_for_no_msg != '')type Message = Msg;#elseif($Leave_empty_for_no_msg == '')type Message = ();#end
+
+#if($Leave_empty_for_no_msg != '')    type Properties = Props;#elseif($Leave_empty_for_no_msg == '')    type Properties = ();#end
+
+
+    fn create(ctx: &Context<Self>) -> Self {
+        Self
+    }
+
+    fn view(&self, ctx: &Context<Self>) -> Html {
+        html! {
+
+        }
+    }
+}

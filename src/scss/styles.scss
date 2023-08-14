@@ -1,0 +1,33 @@
+@use "table";
+@import "variables";
+
+body {
+  background: $color-background-primary;
+  color: $color-primary;
+}
+
+a {
+  color: $color-link;
+}
+
+* {
+  font-family: monospace, monospace;
+}
+
+hr {
+  border: 0;
+  border-top: 3px solid $color-background-primary-background;
+}
+
+ol.crumbs {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.crumb {
+  display: inline-block;
+}
+
+.pre {
+  white-space: pre;
+}

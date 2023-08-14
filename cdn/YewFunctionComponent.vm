@@ -1,0 +1,27 @@
+## An IntelliJ IDEA file template for Yew Function Components.
+## Usage:
+## 1. Go to File | Settings | Editor | File and Code Templates.
+## 2. Click + (Create Template).
+## 3. Change "Name" to: Yew Function Component
+## 4. Change "Extension" to: rs
+## 5. Change "File name" to: $NAME
+## 6. Enable "Reformat according to style".
+## 7. Paste in the code below.
+#set($word = $word)
+#set($camelCaseName = $camelCaseName)
+#define($camelCaseName)#set($words = $NAME.split("_"))#foreach($word in $words)#if($word.length() > 0)$word.substring(0,1).toUpperCase()$word.substring(1).toLowerCase()#end#end#end
+use yew::prelude::*;
+
+#if($Leave_empty_for_no_props != '')
+#[derive(PartialEq, Properties)]
+pub struct Props {
+
+}
+
+#end
+#[function_component($camelCaseName)]
+pub fn $NAME(#if($Leave_empty_for_no_props != '')props: &Props#end) -> Html {
+    html! {
+
+    }
+}
