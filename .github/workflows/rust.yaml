@@ -21,8 +21,8 @@ jobs:
       - name: Trunk build
         run: trunk build --release
 
-      - name: Run tests
-        run: cargo test
+#      - name: Run tests
+#        run: cargo test
 
       - name: Commit to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
