@@ -24,6 +24,13 @@ jobs:
 #      - name: Run tests
 #        run: cargo test
 
+      # Because this is an SPA, navigating to a route without first going "through the base (the client)" will result in a 404.
+      # In a nutshell, without this, going to "example.com/contact" would result in a 404.
+      # So if we configure 404 to go to the client, it will work as expected.
+      # More info here: https://yew.rs/docs/more/deployment#server-configuration
+      - name: Copy index.html to 404.html
+        run: cp dist/index.html dist/404.html
+
       - name: Commit to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
