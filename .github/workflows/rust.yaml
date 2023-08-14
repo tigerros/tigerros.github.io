@@ -11,6 +11,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      - uses: jetli/trunk-action@v0.4.0
+        with:
+          version: 'latest'
 
       - name: Trunk build
         run: trunk build --release
