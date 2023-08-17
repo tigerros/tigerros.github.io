@@ -1,11 +1,11 @@
-use crate::router::BetterRoute;
+use crate::routers::*;
 use yew::prelude::*;
 use yew_router::prelude::*;
 
 #[function_component(Navigation)]
 pub fn navigation<R>() -> Html
 where
-    R: BetterRoute,
+    R: BetterRoute<R>,
 {
     let routes = R::routes();
 

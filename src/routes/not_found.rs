@@ -1,4 +1,4 @@
-use crate::router::*;
+use crate::routers::*;
 use yew::prelude::*;
 use yew_router::prelude::*;
 
@@ -7,7 +7,7 @@ pub fn not_found() -> Html {
     html! {
         <>
             <h1>{"404"}</h1>
-            <p>{"Not found. How about going back to "}<Link<Route> to={Route::Home}>{"home sweet home"}</Link<Route>>{"?"}</p>
+            <p>{"Not found. How about going back to "}<Link<MainRoute> to={MainRoute::Home}>{"home sweet home"}</Link<MainRoute>>{"?"}</p>
         </>
     }
 }

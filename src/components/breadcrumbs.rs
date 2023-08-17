@@ -1,21 +1,21 @@
-use crate::router::Route;
+use crate::routers::*;
 use yew::prelude::*;
-use yew_router::Routable;
+use yew_router::prelude::*;
 
 #[derive(PartialEq, Properties)]
-pub struct Props {
-    pub current_route: Route,
+pub struct Props<R> where R: BetterRoute<R> {
+    pub route: R,
 }
 
 #[function_component(Breadcrumbs)]
-pub fn breadcrumbs(props: &Props) -> Html {
-    let current_path = props.current_route.clone().to_path().split_off(1);
+pub fn breadcrumbs<R>(props: &Props<R>) -> Html where R: BetterRoute<R> {
+    let current_path = props.route.clone().to_path().split_off(1);
 
     if current_path.is_empty() {
         return html! {
             <nav>
                 <ol class="crumbs">
-                    <li class="crumb"><a href={Route::Home.to_path()}>{"tigerros"}</a></li>
+                    <li class="crumb"><Link<MainRoute> to={MainRoute::Home}>{"tigerros"}</Link<MainRoute>></li>
                 </ol>
             </nav>
         };
@@ -25,12 +25,13 @@ pub fn breadcrumbs(props: &Props) -> Html {
     let segment_list: Html = segments
         .iter()
         .map(|&segment| {
-            let segment_owned = segment.to_owned();
+            let segment_route = R::recognize(segment).unwrap();
 
+            // <a href={segment_owned}>{segment}</a>
             html! {
                 <li class="crumb">
                     <span class="pre">{" > "}</span>
-                    <a href={segment_owned}>{segment}</a>
+                    <Link<R> to={segment_route}>{segment}</Link<R>>
                 </li>
             }
         })
@@ -39,7 +40,7 @@ pub fn breadcrumbs(props: &Props) -> Html {
     html! {
         <nav>
             <ol class="crumbs">
-                <li class="crumb"><a href={Route::Home.to_path()}>{"tigerros"}</a></li>
+                <li class="crumb"><a href={MainRoute::Home.to_path()}>{"tigerros"}</a></li>
                 {segment_list}
             </ol>
         </nav>

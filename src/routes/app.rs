@@ -1,13 +1,13 @@
 use yew::prelude::*;
 use yew_router::prelude::*;
 
-use crate::router::*;
+use crate::routers::*;
 
 #[function_component(App)]
 pub fn app() -> Html {
     html! {
         <BrowserRouter>
-            <Switch<Route> render={Route::switch} />
+            <Switch<MainRoute> render={MainRoute::switch} />
         </BrowserRouter>
     }
 }
