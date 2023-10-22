@@ -6,7 +6,6 @@ pub fn Contact(cx: Scope) -> Element {
         ul {
             li { a { href: "https://github.com/tigerros", "GitHub" } }
             li { a { href: "mailto:tigerros.gh@gmail.com", "Email" } }
-            li { a { href: "https://www.linkedin.com/in/aurel-leonard-danel-195470232", "LinkedIn" } }
         }
     }
 }
