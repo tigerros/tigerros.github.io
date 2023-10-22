@@ -9,4 +9,3 @@ pub fn Contact(cx: Scope) -> Element {
         }
     }
 }
-ca
