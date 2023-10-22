@@ -1,9 +1,5 @@
-mod breadcrumbs;
-mod github_dir_listing;
-mod layout;
-mod navigation;
+use dry_mods::mods;
 
-pub use breadcrumbs::*;
-pub use github_dir_listing::*;
-pub use layout::*;
-pub use navigation::*;
+mods! {
+    pub mod pub use layout, navigation;
+}

@@ -1,5 +1,0 @@
-cdn\
- res-styles.css
- YewFunctionComponent.vm
- YewStructComponent.vm
-index.txt

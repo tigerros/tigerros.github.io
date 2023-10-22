@@ -1,17 +1,20 @@
 [package]
 name = "tigerros_web"
-version = "0.1.0"
 edition = "2021"
-#build = "build/build.rs"
+version = "0.1.0"
+authors = ["Leonard D. <tigerros.gh@gmail.com>"]
 
 [dependencies]
-yew = { version = "0.20.0", features = ["csr"] }
-yew-router = "0.17.0"
-gloo-net = { version = "0.4.0" , default-features = false, features = ["http"] }
-wasm-bindgen-futures = "0.4.37"
+dioxus = "0.4.0"
+dioxus-router = "0.4.1"
+dioxus-web = "0.4.0"
+dry-mods = "0.1.5"
 
 [profile.release]
+opt-level = "z"
+debug = false
 lto = true
-opt-level = 'z'
 codegen-units = 1
-strip = "symbols"
+panic = "abort"
+strip = true
+incremental = false

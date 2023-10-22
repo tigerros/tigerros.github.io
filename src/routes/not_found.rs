@@ -1,13 +1,15 @@
-use crate::routers::*;
-use yew::prelude::*;
-use yew_router::prelude::*;
+#![allow(non_snake_case)]
+use crate::prelude::*;
 
-#[function_component(NotFound)]
-pub fn not_found() -> Html {
-    html! {
-        <>
-            <h1>{"404"}</h1>
-            <p>{"Not found. How about going back to "}<Link<MainRoute> to={MainRoute::Home}>{"home sweet home"}</Link<MainRoute>>{"?"}</p>
-        </>
+#[inline_props]
+pub fn NotFound(cx: Scope, segments: Vec<String>) -> Element {
+    render! {
+        h1 { "404" }
+        p {
+            "Not found. How about going back "
+            Link { to: Route::Home {}, "home" }
+            "?"
+        }
+        pre { "Attempted to navigate to: {segments.len():?}" }
     }
 }

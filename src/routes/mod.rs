@@ -1,15 +1,5 @@
-pub use app::*;
-pub use cdn::*;
-pub use contact::*;
-pub use home::*;
-pub use not_found::*;
-pub use projects::*;
-pub use dirix::*;
+use dry_mods::mods;
 
-mod app;
-mod cdn;
-mod contact;
-mod home;
-mod not_found;
-mod dirix;
-mod projects;
+mods! {
+    pub mod pub use contact, not_found, home, projects, dirix, blog;
+}

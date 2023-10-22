@@ -1,12 +1,12 @@
-use yew::prelude::*;
+#![allow(non_snake_case)]
+use crate::prelude::*;
 
-#[function_component(Contact)]
-pub fn contact() -> Html {
-    html! {
-        <ul>
-            <li><a href="https://github.com/tigerros">{"GitHub"}</a></li>
-            <li><a href="mailto:tigerros.gh@gmail.com">{"Email"}</a></li>
-            <li><a href="https://www.linkedin.com/in/aurel-leonard-danel-195470232">{"LinkedIn"}</a></li>
-        </ul>
+pub fn Contact(cx: Scope) -> Element {
+    render! {
+        ul {
+            li { a { href: "https://github.com/tigerros", "GitHub" } }
+            li { a { href: "mailto:tigerros.gh@gmail.com", "Email" } }
+            li { a { href: "https://www.linkedin.com/in/aurel-leonard-danel-195470232", "LinkedIn" } }
+        }
     }
 }

@@ -1,1 +1,0 @@
-My personal website. Built with [Yew](https://yew.rs).

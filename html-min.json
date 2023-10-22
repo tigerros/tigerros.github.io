@@ -1,0 +1,17 @@
+{
+  "collapseWhitespace": true,
+  "collapseInlineTagWhitespace": true,
+  "keepClosingSlash": false,
+  "removeComments": true,
+  "removeRedundantAttributes": true,
+  "removeScriptTypeAttributes": true,
+  "removeStyleLinkTypeAttributes": true,
+  "useShortDoctype": true,
+  "collapseBooleanAttributes": true,
+  "removeAttributeQuotes": true,
+  "removeOptionalTags": true,
+  "sortAttributes": true,
+  "sortClassName": false,
+  "minifyJS": false,
+  "minifyCSS": true
+}

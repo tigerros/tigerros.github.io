@@ -1,0 +1,7 @@
+{
+  "devDependencies": {
+    "@rollup/plugin-terser": "^0.4.3",
+    "html-minifier": "^4.0.0",
+    "rollup": "^3.29.2"
+  }
+}

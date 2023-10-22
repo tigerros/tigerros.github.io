@@ -1,15 +1,15 @@
-use yew::prelude::*;
+#![allow(non_snake_case)]
 
-#[function_component(Dirix)]
-pub fn dirix() -> Html {
-    html! {
-        <>
-            <p>{"This page is in development."}</p>
-            <p>{"Links:"}</p>
-            <ul>
-                <li><a href="https://github.com/tigerros/dirix">{"GitHub"}</a></li>
-                <li><a href="https://crates.io/crates/dirix">{"crates.io"}</a></li>
-            </ul>
-        </>
+use crate::prelude::*;
+
+#[inline_props]
+pub fn Dirix(cx: Scope) -> Element {
+    render! {
+        p { "This page is in development." }
+        p { "Links: " }
+        ul {
+            li { a { href: "https://github.com/tigerros/dirix", "GitHub" } }
+            li { a { href: "https://crates.io/crates/dirix", "crates.io" } }
+        }
     }
 }
