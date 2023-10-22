@@ -21,6 +21,7 @@ jobs:
           toolchain: stable
           override: true
           components: rust-src
+          target: wasm32-unknown-unknown
 
       - name: Install Trunk
         uses: jetli/trunk-action@v0.4.0
